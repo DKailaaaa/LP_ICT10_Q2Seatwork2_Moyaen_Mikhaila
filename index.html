@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student grade calculator</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body{
+            background-color: #283618;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:  black;
+        }
+        .display{
+            display: flex;
+            flex-direction: column;  
+            align-items: center;     
+            justify-content: center;
+        }
+        .label-style{
+            width: 170px;
+            text-align: left;  
+            background-color: #606c38;
+            padding-left: 10px; 
+            border-radius: 5px;
+            color: #faedcd ;
+        }
+        p {
+            margin: 2px;
+        }
+        .container{
+            border: solid black 1px;
+            padding: 20px;
+            width: 550px;
+            background-color: #fffbd7;
+            border-radius: 20px;
+        }
+        button{
+            width: 500px;
+            padding: 10px;
+            background-color: #bc6c25;
+            color: white;
+            border-radius: 13px;
+        }
+        .nav{
+            background-color: #704E2E;
+            width: 1550px;
+            padding: 10px;
+            color: white;
+        }
+        .mb-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        h1 {
+          color: black;
+        }
+    </style>
+</head>
+<body>
+
+  <br>
+  <br>
+  
+
+    <div class="container text-center">
+    <bold><h1> Student Grade Calculator </h1></bold>
+            <div style="display: flex; justify-content: center;">
+                    <div class="mb-3">
+                        <label for="name" class="label-style form-label">First Name:</label>
+                        <input type="text" class="form-control" id="first" placeholder="Enter Here">
+                    </div>
+                    <div class="mb-3">
+                        <label for="name" class="label-style form-label">Last Name:</label>
+                        <input type="text" class="form-control" id="last" placeholder="Enter Here">
+                    </div>
+                </div>
+                  <div class="subjects-row">
+                  <div class="mb-3">
+                     <label for="Math" class="label-style form-label">Math:</label>
+                     <input type="number" class="form-control" id="math" placeholder="Enter grade">
+                </div>
+                  <div class="mb-3">
+                    <label for="English" class="label-style form-label">English:</label>
+                    <input type="number" class="form-control" id="english" placeholder="Enter grade">
+                </div>
+                  <div class="mb-3">
+                    <label for="Science" class="label-style form-label">Science:</label>
+                    <input type="number" class="form-control" id="science" placeholder="Enter grade">
+                </div>
+                  <div class="mb-3">
+                    <label for="Filipino" class="label-style form-label">Filipino:</label>
+                    <input type="number" class="form-control" id="filipino" placeholder="Enter grade">
+                </div>
+                  <div class="mb-3">
+                    <label for="ICT" class="label-style form-label">ICT:</label>
+                    <input type="number" class="form-control" id="ict" placeholder="Enter grade">
+                </div>
+                  <div class="mb-3">
+                    <label for="PE" class="label-style form-label">PE:</label>
+                    <input type="number" class="form-control" id="pe" placeholder="Enter grade">
+                </div>
+              </div>
+                    <button py-click="compute_average">Calculate GWA</button>
+    
+            </div>
+    <br>
+    <br>
+    
+<div class="display" style="display: flex; justify-content: center; margin-top: 20px;">
+  <div id="grades_container" 
+       style="width: 280px; display: none; background-color: #f6fbd4; padding: 10px; border-radius: 10px; border: 1px solid black; text-align: left;">
+
+       <p id="name"></p>
+       <p id="output"></p>
+
+       <br>
+
+        <p>Math: <span id="math_output"></span></p>
+        <p>English: <span id="english_output"></span></p>
+        <p>Science: <span id="science_output"></span></p>
+        <p>Filipino: <span id="filipino_output"></span></p>
+        <p>ICT: <span id="ict_output"></span></p>
+        <p>PE: <span id="pe_output"></span></p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+        <script type="py" src="main.py"></script>
+</body>
+</html>
